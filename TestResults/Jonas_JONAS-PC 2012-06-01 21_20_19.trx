@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1e93150a-9a63-42fb-8b98-6f350ce07b64" name="Jonas@JONAS-PC 2012-06-01 21:20:19" runUser="Jonas-PC\Jonas" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="496a61aa-4d45-44a3-8c70-ae3d7dd51462">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Jonas_JONAS-PC 2012-06-01 21_20_19">
+      <DeploymentItem filename="C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\alf-services.dll" />
+      <DeploymentItem filename="C:\Users\Jonas\Documents\GitHub\alf\alf-2013\bin\alf-2013.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-01T21:20:19.3301751+02:00" queuing="2012-06-01T21:20:35.6561089+02:00" start="2012-06-01T21:20:35.6611092+02:00" finish="2012-06-01T21:20:36.4161524+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ServiceReturnsCorrectAmountOfFiles" storage="c:\users\jonas\documents\github\alf\alf-tests\bin\debug\alf-tests.dll" id="56bd20bc-db3a-85cc-102c-ad539f811be3">
+      <Execution id="9e2c4cc8-93e1-4c9e-aca9-4b241556cd23" />
+      <TestMethod codeBase="C:/Users/Jonas/Documents/GitHub/alf/alf-tests/bin/Debug/alf-tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="alf_tests.StorageTest, alf-tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ServiceReturnsCorrectAmountOfFiles" />
+    </UnitTest>
+    <UnitTest name="SaveFileAndRetrieve" storage="c:\users\jonas\documents\github\alf\alf-tests\bin\debug\alf-tests.dll" id="6a9cd35e-ecb0-bf97-d96b-a23dd2492250">
+      <Execution id="a964c87b-0016-4e81-afd0-736b72dae198" />
+      <TestMethod codeBase="C:/Users/Jonas/Documents/GitHub/alf/alf-tests/bin/Debug/alf-tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="alf_tests.StorageTest, alf-tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SaveFileAndRetrieve" />
+    </UnitTest>
+    <UnitTest name="TeacherNameShouldConcatenateFirstAndLastName" storage="c:\users\jonas\documents\github\alf\alf-tests\bin\debug\alf-tests.dll" id="32fd4c67-6e71-1e37-2d1d-d226a4733d0c">
+      <Execution id="846f99d1-9371-4639-b046-56d52a96123c" />
+      <TestMethod codeBase="C:/Users/Jonas/Documents/GitHub/alf/alf-tests/bin/Debug/alf-tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="alf_tests.TeacherTest, alf-tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TeacherNameShouldConcatenateFirstAndLastName" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="32fd4c67-6e71-1e37-2d1d-d226a4733d0c" executionId="846f99d1-9371-4639-b046-56d52a96123c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56bd20bc-db3a-85cc-102c-ad539f811be3" executionId="9e2c4cc8-93e1-4c9e-aca9-4b241556cd23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a9cd35e-ecb0-bf97-d96b-a23dd2492250" executionId="a964c87b-0016-4e81-afd0-736b72dae198" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="846f99d1-9371-4639-b046-56d52a96123c" testId="32fd4c67-6e71-1e37-2d1d-d226a4733d0c" testName="TeacherNameShouldConcatenateFirstAndLastName" computerName="JONAS-PC" duration="00:00:00.0114779" startTime="2012-06-01T21:20:35.6631093+02:00" endTime="2012-06-01T21:20:35.8331190+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="846f99d1-9371-4639-b046-56d52a96123c">
+    </UnitTestResult>
+    <UnitTestResult executionId="9e2c4cc8-93e1-4c9e-aca9-4b241556cd23" testId="56bd20bc-db3a-85cc-102c-ad539f811be3" testName="ServiceReturnsCorrectAmountOfFiles" computerName="JONAS-PC" duration="00:00:00.1831947" startTime="2012-06-01T21:20:35.8341191+02:00" endTime="2012-06-01T21:20:36.0201297+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e2c4cc8-93e1-4c9e-aca9-4b241556cd23">
+    </UnitTestResult>
+    <UnitTestResult executionId="a964c87b-0016-4e81-afd0-736b72dae198" testId="6a9cd35e-ecb0-bf97-d96b-a23dd2492250" testName="SaveFileAndRetrieve" computerName="JONAS-PC" duration="00:00:00.0087884" startTime="2012-06-01T21:20:36.0211298+02:00" endTime="2012-06-01T21:20:36.0321304+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a964c87b-0016-4e81-afd0-736b72dae198">
+    </UnitTestResult>
+  </Results>
+</TestRun>

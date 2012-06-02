@@ -1,0 +1,12 @@
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\alf-services.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\alf-services.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Bson.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Driver.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Bson.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Bson.xml
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Driver.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\MongoDB.Driver.xml
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\obj\Debug\alf-services.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\obj\Debug\alf-services.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-services\bin\Debug\alf-services.dll.config

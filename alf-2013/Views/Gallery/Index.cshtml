@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gallery</h2>
+
+@using (Html.BeginForm("Index", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" />
+    <input type="submit" value="OK" />
+}
+<br /><br />
+Files: 
+@foreach (var item in ViewBag.Files)
+{
+    <img src="/Gallery/Picture?filename=@item" alt="" width="100%" />
+}

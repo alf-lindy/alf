@@ -1,9 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alf-2013", "alf-2013\alf-2013.csproj", "{6BF32499-0DAD-42C4-9B89-D79AF25231AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alf-tests", "alf-tests\alf-tests.csproj", "{B1B1AD6A-7DC3-428C-9B8C-90693DB4755D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A03D5C58-DB6F-4E4F-A72F-38EA11F450C1}"
+	ProjectSection(SolutionItems) = preProject
+		alf-2013.vsmdi = alf-2013.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alf-services", "alf-services\alf-services.csproj", "{B7905999-5840-4DA7-BA77-1B68981E917E}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = alf-2013.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -13,6 +27,14 @@ Global
 		{6BF32499-0DAD-42C4-9B89-D79AF25231AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BF32499-0DAD-42C4-9B89-D79AF25231AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BF32499-0DAD-42C4-9B89-D79AF25231AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B1AD6A-7DC3-428C-9B8C-90693DB4755D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B1AD6A-7DC3-428C-9B8C-90693DB4755D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B1AD6A-7DC3-428C-9B8C-90693DB4755D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B1AD6A-7DC3-428C-9B8C-90693DB4755D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7905999-5840-4DA7-BA77-1B68981E917E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7905999-5840-4DA7-BA77-1B68981E917E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7905999-5840-4DA7-BA77-1B68981E917E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7905999-5840-4DA7-BA77-1B68981E917E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

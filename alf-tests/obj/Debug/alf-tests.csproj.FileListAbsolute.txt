@@ -1,0 +1,16 @@
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-tests.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-tests.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-2013.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-2013.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\obj\Debug\alf-tests.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\obj\Debug\alf-tests.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-services.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Driver.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Bson.dll
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-services.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Driver.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Driver.xml
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Bson.pdb
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\MongoDB.Bson.xml
+C:\Users\Jonas\Documents\GitHub\alf\alf-tests\bin\Debug\alf-tests.dll.config
