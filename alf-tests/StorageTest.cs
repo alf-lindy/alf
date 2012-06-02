@@ -30,9 +30,6 @@ namespace alf_tests
         [TestMethod]
         public void ServiceReturnsCorrectAmountOfFiles()
         {
-            var old_db = Storage.Database;
-            Storage.Database = "testitemamount";
-
             var stream = new MemoryStream(Encoding.UTF8.GetBytes("Jabba-dabba-daa"));
 
             Storage.Store("myfile", stream);
@@ -40,7 +37,6 @@ namespace alf_tests
             Storage.Store("myfile3", stream);
 
             Assert.AreEqual(3, Storage.GetAll().Count());
-            Storage.Database = old_db;
         }
     }
 }
