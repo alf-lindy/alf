@@ -11,36 +11,34 @@ namespace alf_tests
     [TestClass]
     public class StorageTest
     {
-        [Ignore]
         [TestMethod]
         public void SaveFileAndRetrieve()
         {
             var stream = new MemoryStream(Encoding.UTF8.GetBytes("Jabba-dabba-daa"));
             
-            Item.Store("myfile", stream);
+            Storage.Store("myfile", stream);
 
-            var file = Item.Get("myfile");
+            var file = Storage.Get("myfile");
 
             var db_reader = new StreamReader(file);
             var file_content = db_reader.ReadToEnd();
 
             Assert.AreEqual("Jabba-dabba-daa", file_content);
         }
-        [Ignore]
         [TestMethod]
         public void ServiceReturnsCorrectAmountOfFiles()
         {
-            var old_db = Item.Database;
-            Item.Database = "testitemamount";
+            var old_db = Storage.Database;
+            Storage.Database = "testitemamount";
 
             var stream = new MemoryStream(Encoding.UTF8.GetBytes("Jabba-dabba-daa"));
 
-            Item.Store("myfile", stream);
-            Item.Store("myfile2", stream);
-            Item.Store("myfile3", stream);
+            Storage.Store("myfile", stream);
+            Storage.Store("myfile2", stream);
+            Storage.Store("myfile3", stream);
 
-            Assert.AreEqual(3, Item.GetAll().Count());
-            Item.Database = old_db;
+            Assert.AreEqual(3, Storage.GetAll().Count());
+            Storage.Database = old_db;
         }
     }
 }

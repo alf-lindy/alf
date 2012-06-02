@@ -15,13 +15,13 @@ namespace alf_2013.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Files = Item.GetAll();
+            ViewBag.Files = Storage.GetAll();
             return View();
         }
 
         public ImageResult Picture(string filename)
         {
-            return new ImageResult(Item.Get(filename), "image/jpg");
+            return new ImageResult(Storage.Get(filename), "image/jpg");
         }
 
         [HttpPost]
@@ -33,7 +33,7 @@ namespace alf_2013.Controllers
                 var stream = new MemoryStream();
              
                 file.InputStream.CopyTo(stream);
-                Item.Store(filename, stream);
+                Storage.Store(filename, stream);
             }
 
             return RedirectToAction("Index");

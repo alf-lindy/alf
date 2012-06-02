@@ -9,13 +9,14 @@ using System.Configuration;
 
 namespace alf_services.Storage
 {
-    public class Item
+    public class Storage
     {
         public static string Database = "testdb";
+        private static MongoServer server;
 
         public static MemoryStream Get(string filename)
         {
-            var server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
+            if (!Connect()) return null;
             var database = server.GetDatabase(Database);
             
             var file = database.GridFS.FindOne(Query.EQ("filename", filename));
@@ -29,7 +30,7 @@ namespace alf_services.Storage
 
         public static void Store(string filename, MemoryStream stream)
         {
-            var server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
+            if (!Connect()) return;
             var database = server.GetDatabase(Database);
 
             stream.Position = 0;
@@ -39,10 +40,26 @@ namespace alf_services.Storage
 
         public static IEnumerable<string> GetAll()
         {
-            var server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
+            if (!Connect()) return null;
             var database = server.GetDatabase(Database);
 
             return database.GridFS.FindAll().Select(x => x.Name);
+        }
+
+        private static bool Connect()
+        {
+            if (server == null)
+            {
+                try
+                {
+                    server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
+                }
+                catch (Exception e)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
