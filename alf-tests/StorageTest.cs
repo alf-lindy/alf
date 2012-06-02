@@ -11,6 +11,7 @@ namespace alf_tests
     [TestClass]
     public class StorageTest
     {
+        [Ignore]
         [TestMethod]
         public void SaveFileAndRetrieve()
         {
@@ -25,6 +26,7 @@ namespace alf_tests
 
             Assert.AreEqual("Jabba-dabba-daa", file_content);
         }
+        [Ignore]
         [TestMethod]
         public void ServiceReturnsCorrectAmountOfFiles()
         {
