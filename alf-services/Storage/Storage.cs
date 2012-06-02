@@ -16,7 +16,7 @@ namespace alf_services.Storage
 
         public static MemoryStream Get(string filename)
         {
-            if (!Connect()) return null;
+            Connect();
             var database = server.GetDatabase(Database);
             
             var file = database.GridFS.FindOne(Query.EQ("filename", filename));
@@ -30,7 +30,7 @@ namespace alf_services.Storage
 
         public static void Store(string filename, MemoryStream stream)
         {
-            if (!Connect()) return;
+            Connect();
             var database = server.GetDatabase(Database);
 
             stream.Position = 0;
@@ -40,26 +40,18 @@ namespace alf_services.Storage
 
         public static IEnumerable<string> GetAll()
         {
-            if (!Connect()) return null;
+            Connect();
             var database = server.GetDatabase(Database);
 
             return database.GridFS.FindAll().Select(x => x.Name);
         }
 
-        private static bool Connect()
+        private static void Connect()
         {
             if (server == null)
             {
-                try
-                {
-                    server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
-                }
-                catch (Exception e)
-                {
-                    return false;
-                }
+                 server = MongoServer.Create(ConfigurationManager.AppSettings.Get("MONGOLAB_URI"));
             }
-            return true;
         }
     }
 }

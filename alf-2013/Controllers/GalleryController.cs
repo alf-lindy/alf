@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Management;
 using System.IO;
 using alf_services.Storage;
 
@@ -13,15 +14,34 @@ namespace alf_2013.Controllers
         //
         // GET: /Gallery/
 
+
+
         public ActionResult Index()
         {
-            ViewBag.Files = Storage.GetAll();
+            try
+            {
+                ViewBag.Files = Storage.GetAll();
+            } 
+            catch (Exception e) 
+            {
+                new LogEvent("Error: " + e.Message);
+                ViewBag.Files = new List<string>();
+            }
             return View();
         }
 
         public ImageResult Picture(string filename)
         {
-            return new ImageResult(Storage.Get(filename), "image/jpg");
+            ImageResult image = null;
+            try
+            {
+                image = new ImageResult(Storage.Get(filename), "image/jpg");
+            }
+            catch (Exception e)
+            {
+                new LogEvent("Error: " + e.Message);
+            }
+            return image;
         }
 
         [HttpPost]
@@ -79,4 +99,12 @@ namespace alf_2013.Controllers
            response.End();
        }
    }
+
+    public class LogEvent : WebRequestErrorEvent
+    {
+        public LogEvent(string message)
+            : base(null, null, 100001, new Exception(message))
+        {
+        }
+    }
 }
