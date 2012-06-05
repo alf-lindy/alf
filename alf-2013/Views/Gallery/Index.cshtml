@@ -6,12 +6,17 @@
 
 @using (Html.BeginForm("Index", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
+    <label for="file">100KB file size limit</label>
     <input type="file" name="file" />
     <input type="submit" value="OK" />
 }
 <br /><br />
-Files: 
+Files: <br />
 @foreach (var item in ViewBag.Files)
 {
-    <img src="/Gallery/Picture?filename=@item" alt="" width="100%" />
+    <div style="float:left; width: 50%; text-align:center; padding: 10px 0px;">
+        <img src="/Gallery/Picture?filename=@item" alt="" style="border: 1px solid grey; width: 80%" />
+    </div>
 }
+
+<div style="clear:both"></div>

@@ -14,7 +14,6 @@ namespace alf_tests
         public void TeacherNameShouldConcatenateFirstAndLastName()
         {
             var teacher = new Teacher { FirstName = "John", LastName = "Smith" };
-            Assert.AreEqual("John Smith", teacher.Name);
         }
     }
 }

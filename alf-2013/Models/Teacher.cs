@@ -7,14 +7,11 @@ namespace alf_2013.Models
 {
     public class Teacher
     {
+        public int TeacherID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public string Name { 
-            get 
-            {
-                return FirstName + " " + LastName;
-            } 
-        }
+        public string Image { get; set; }
+        public string Bio { get; set; }
+        public string Website { get; set; }
     }
 }
