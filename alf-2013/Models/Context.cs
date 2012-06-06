@@ -21,7 +21,7 @@ namespace alf_2013.Models
         }
     }
 
-    public class WorkshopInitializer : DropCreateDatabaseAlways<WorkshopContext>
+    public class WorkshopInitializer : CreateDatabaseIfNotExists<WorkshopContext>
     {
         protected override void Seed(WorkshopContext context)
         {
