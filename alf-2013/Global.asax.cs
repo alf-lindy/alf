@@ -36,7 +36,7 @@ namespace alf_2013
             AreaRegistration.RegisterAllAreas();
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer<WorkshopContext>(new WorkshopInitializer());
+            //Database.SetInitializer<WorkshopContext>(new WorkshopInitializer());
         }
     }
 }
