@@ -1,5 +1,6 @@
 using System.Data.Entity;
 using Devtalk.EF.CodeFirst;
+using alf_2013.Models;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(alf_2013.App_Start.DontDropDbJustCreateTablesIfModelChangedStart), "Start")]
 
