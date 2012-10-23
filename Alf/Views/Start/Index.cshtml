@@ -1,0 +1,40 @@
+﻿@{ Layout = ""; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/slides")
+
+    <title>Another Lindy Hop Festival 2013</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+    <script src="~/Scripts/jquery.flexislider.js" type="text/javascript"></script>
+</head>
+<body>
+    <img src="~/Content/Images/splash.png" id="banner" />
+    <div id="maincontent">
+
+        <div class="splashbox">
+            @Html.ActionLink("Event information", "Index", "Participant")
+            @Html.ActionLink("Teachers", "Index", "Participant")
+            @Html.ActionLink("Register", "Create", "Participant",null, new { @class = "green" })
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div id="slider">
+            <img src="~/Content/Images/slides/IMG_5124.jpg" />
+            <img src="~/Content/Images/slides/IMG_5171.jpg" />
+            <img src="~/Content/Images/slides/IMG_5172.jpg" />
+            <img src="~/Content/Images/slides/IMG_5189.jpg" />
+            <img src="~/Content/Images/slides/IMG_5211.jpg" />
+            <img src="~/Content/Images/slides/IMG_5218.jpg" />
+        </div>
+        
+    </div>
+
+</body>
+</html>

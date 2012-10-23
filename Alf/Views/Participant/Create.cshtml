@@ -1,0 +1,61 @@
+﻿@model Alf.Models.Participant
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Legg til deltager</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Mail)
+            @Html.EditorFor(model => model.Mail)
+            @Html.ValidationMessageFor(model => model.Mail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Role)
+            Follow @Html.RadioButtonFor(model => model.Role, Alf.Models.Role.Follow)
+            Lead @Html.RadioButtonFor(model => model.Role, Alf.Models.Role.Lead)
+            @Html.ValidationMessageFor(model => model.Role)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Track)
+            Lindy Hop @Html.RadioButtonFor(model => model.Track, Alf.Models.Track.Lindy_Hop)
+            Boogie Woogie @Html.RadioButtonFor(model => model.Track, Alf.Models.Track.Boogie_Woogie)
+            @Html.ValidationMessageFor(model => model.Track)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Level)
+            Beginner @Html.RadioButtonFor(model => model.Level, Alf.Models.Level.Beginner)
+            Intermediate @Html.RadioButtonFor(model => model.Level, Alf.Models.Level.Intermediate)
+            Advanced @Html.RadioButtonFor(model => model.Level, Alf.Models.Level.Advanced)
+            @Html.ValidationMessageFor(model => model.Level)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NTNUI)
+            @Html.EditorFor(model => model.NTNUI)
+            @Html.ValidationMessageFor(model => model.NTNUI)
+        </div>
+
+        <p>
+            <input type="submit" value="Register" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
