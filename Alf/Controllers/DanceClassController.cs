@@ -9,33 +9,33 @@ using Alf.Models;
 
 namespace Alf.Controllers
 {
-    public class ParticipantController : Controller
+    public class DanceClassController : Controller
     {
         private RegistrationContext db = new RegistrationContext();
 
         //
-        // GET: /Participant/
+        // GET: /DanceClass/
 
         public ActionResult Index()
         {
-            return View(db.Participants.ToList());
+            return View(db.Classes.ToList());
         }
 
         //
-        // GET: /Participant/Details/5
+        // GET: /DanceClass/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            Participant participant = db.Participants.Find(id);
-            if (participant == null)
+            DanceClass danceclass = db.Classes.Find(id);
+            if (danceclass == null)
             {
                 return HttpNotFound();
             }
-            return View(participant);
+            return View(danceclass);
         }
 
         //
-        // GET: /Participant/Create
+        // GET: /DanceClass/Create
 
         public ActionResult Create()
         {
@@ -43,72 +43,70 @@ namespace Alf.Controllers
         }
 
         //
-        // POST: /Participant/Create
+        // POST: /DanceClass/Create
 
         [HttpPost]
-        public ActionResult Create(Participant participant)
+        public ActionResult Create(DanceClass danceclass)
         {
             if (ModelState.IsValid)
             {
-                
-                
-                db.Participants.Add(participant);
+                db.Classes.Add(danceclass);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(participant);
+            return View(danceclass);
         }
 
         //
-        // GET: /Participant/Edit/5
+        // GET: /DanceClass/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            Participant participant = db.Participants.Find(id);
-            if (participant == null)
+            DanceClass danceclass = db.Classes.Find(id);
+            if (danceclass == null)
             {
                 return HttpNotFound();
             }
-            return View(participant);
+            return View(danceclass);
         }
 
         //
-        // POST: /Participant/Edit/5
+        // POST: /DanceClass/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Participant participant)
+        public ActionResult Edit(DanceClass danceclass)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(participant).State = EntityState.Modified;
+                db.Entry(danceclass).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(participant);
+            return View(danceclass);
         }
 
         //
-        // GET: /Participant/Delete/5
+        // GET: /DanceClass/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            Participant participant = db.Participants.Find(id);
-            if (participant == null)
+            DanceClass danceclass = db.Classes.Find(id);
+            if (danceclass == null)
             {
                 return HttpNotFound();
             }
-            return View(participant);
+            return View(danceclass);
         }
 
         //
-        // POST: /Participant/Delete/5
+        // POST: /DanceClass/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Participant participant = db.Participants.Find(id);
-            db.Participants.Remove(participant);
+            DanceClass danceclass = db.Classes.Find(id);
+            db.Classes.Remove(danceclass);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

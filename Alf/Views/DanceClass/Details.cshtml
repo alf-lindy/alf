@@ -1,0 +1,22 @@
+﻿@model Alf.Models.DanceClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DanceClass</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Limit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Limit)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

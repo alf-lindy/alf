@@ -1,0 +1,35 @@
+﻿@model Alf.Models.DanceClass
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DanceClass</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Limit)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Limit)
+            @Html.ValidationMessageFor(model => model.Limit)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

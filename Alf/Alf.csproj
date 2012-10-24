@@ -128,23 +128,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\IParticipantRepository.cs" />
-    <Compile Include="App_Code\ParticipantRepository.cs" />
+    <Compile Include="Controllers\DanceClassController.cs" />
+    <Compile Include="Models\IParticipantRepository.cs" />
+    <Compile Include="Models\ParticipantRepository.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Models\Entities.cs" />
     <Compile Include="Controllers\ParticipantController.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\DanceClass.cs" />
     <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\RegistrationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\data.mdf" />
     <Content Include="App_Data\database.sdf" />
+    <Content Include="App_Data\data_log.ldf">
+      <DependentUpon>data.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\Images\banner.png" />
     <Content Include="Content\Images\pagination.png" />
     <Content Include="Content\Images\slides\2.jpg" />
@@ -246,11 +254,18 @@
     <Content Include="Views\Participant\Create.cshtml" />
     <Content Include="Views\Participant\Edit.cshtml" />
     <Content Include="Views\Participant\Delete.cshtml" />
+    <Content Include="Views\DanceClass\Index.cshtml" />
+    <Content Include="Views\DanceClass\Details.cshtml" />
+    <Content Include="Views\DanceClass\Create.cshtml" />
+    <Content Include="Views\DanceClass\Edit.cshtml" />
+    <Content Include="Views\DanceClass\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
