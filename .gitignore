@@ -15,8 +15,8 @@ local.properties
 .classpath
 .settings/
 .loadpath
-.mdf
-.ldf
+*.mdf
+*.ldf
 
 # External tool builders
 .externalToolBuilders/
