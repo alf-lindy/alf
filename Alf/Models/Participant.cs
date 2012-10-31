@@ -19,6 +19,10 @@ namespace Alf.Models
         public Role Role { get; set; }
         public bool NTNUI { get; set; }
         public bool Paid { get; set; }
+        public bool OfferAccomodation { get; set; }
+        public bool SeeksAccomodation { get; set; }
+        public string Phonenumber { get; set; }
+
         
         public int DanceClassId { get; set; }
         [ForeignKey("DanceClassId")]

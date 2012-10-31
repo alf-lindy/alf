@@ -44,6 +44,14 @@
             @Html.ValidationMessageFor(model => model.NTNUI)
         </div>
 
+        <div class="editor-label">
+            I can offer accomodation: @Html.EditorFor(model => model.OfferAccomodation)<br />
+            My Phonenumber is: @Html.TextBoxFor(model => model.Phonenumber)
+        </div>
+        <div class="editor-label">
+            I want to get an offer on accomodation: @Html.EditorFor(model => model.SeeksAccomodation)<br />
+        </div>
+
         <div>
             @ViewBag.Message
         </div>
