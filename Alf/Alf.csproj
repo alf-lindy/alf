@@ -148,11 +148,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\data.mdf" />
-    <Content Include="App_Data\database.sdf" />
-    <Content Include="App_Data\data_log.ldf">
-      <DependentUpon>data.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\Images\banner.png" />
     <Content Include="Content\Images\pagination.png" />
     <Content Include="Content\Images\slides\2.jpg" />
@@ -272,6 +267,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
