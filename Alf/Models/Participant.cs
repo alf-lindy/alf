@@ -1,7 +1,7 @@
-﻿using Alf.App_Code;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
@@ -17,10 +17,12 @@ namespace Alf.Models
         public string Name { get; set; }
         public string Mail { get; set; }
         public Role Role { get; set; }
-        public Track Track { get; set; }
-        public Level Level { get; set; }
         public bool NTNUI { get; set; }
         public bool Paid { get; set; }
+        
+        public int DanceClassId { get; set; }
+        [ForeignKey("DanceClassId")]
+        public DanceClass DanceClass { get; set; }
         public ParticipantStatus Status { get; set; }
     }
 }

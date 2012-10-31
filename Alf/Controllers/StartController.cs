@@ -8,7 +8,7 @@ namespace Alf.Controllers
 {
     public class StartController : Controller
     {
-
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();

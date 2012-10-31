@@ -1,5 +1,4 @@
-﻿using Alf.App_Code;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,6 +14,5 @@ namespace Alf.Models
         public Track Track { get; set; }
         public Level Level { get; set; }
         public int Limit { get; set; }
-        public IEnumerable<Participant> Participants { get; set; }
     }
 }

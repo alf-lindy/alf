@@ -11,9 +11,10 @@ img#banner {
     display:block;
 }
 #maincontent {
-    width: 1100px;
+    width: 1060px;
     margin: 0px auto;
     background: white;
+    padding: 20px;
 }
 
 .splashbox a {
@@ -36,14 +37,17 @@ input, p, label {
     padding: 4px;
 }
 
-form fieldset legend {
+fieldset legend {
     padding: 10px;
     font-size: 1.3em;
 }
-form fieldset div {
+fieldset div {
     padding: 10px;
 }
-form fieldset label {
+fieldset ul {
+    margin-left: 20px;
+}
+fieldset label {
     width: 100px;
     display:inline-block;
 }

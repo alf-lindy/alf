@@ -128,15 +128,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DanceClassController.cs" />
-    <Compile Include="Models\IParticipantRepository.cs" />
-    <Compile Include="Models\ParticipantRepository.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Models\Entities.cs" />
     <Compile Include="Controllers\ParticipantController.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Entities.cs" />
     <Compile Include="Controllers\StartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -249,16 +249,21 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Start\Index.cshtml" />
-    <Content Include="Views\Participant\Index.cshtml" />
-    <Content Include="Views\Participant\Details.cshtml" />
-    <Content Include="Views\Participant\Create.cshtml" />
-    <Content Include="Views\Participant\Edit.cshtml" />
-    <Content Include="Views\Participant\Delete.cshtml" />
     <Content Include="Views\DanceClass\Index.cshtml" />
     <Content Include="Views\DanceClass\Details.cshtml" />
     <Content Include="Views\DanceClass\Create.cshtml" />
     <Content Include="Views\DanceClass\Edit.cshtml" />
     <Content Include="Views\DanceClass\Delete.cshtml" />
+    <Content Include="Views\Participant\Index.cshtml" />
+    <Content Include="Views\Participant\Details.cshtml" />
+    <Content Include="Views\Participant\Create.cshtml" />
+    <Content Include="Views\Participant\Edit.cshtml" />
+    <Content Include="Views\Participant\Delete.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Participant\RegistryComplete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

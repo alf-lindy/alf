@@ -15,7 +15,7 @@ namespace Alf.Controllers
 
         //
         // GET: /Participant/
-
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Participants.ToList());
@@ -23,7 +23,7 @@ namespace Alf.Controllers
 
         //
         // GET: /Participant/Details/5
-
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             Participant participant = db.Participants.Find(id);
@@ -36,9 +36,10 @@ namespace Alf.Controllers
 
         //
         // GET: /Participant/Create
-
+        [AllowAnonymous]
         public ActionResult Create()
         {
+            ViewBag.DanceClasses = db.Classes.ToList();
             return View();
         }
 
@@ -46,23 +47,53 @@ namespace Alf.Controllers
         // POST: /Participant/Create
 
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult Create(Participant participant)
         {
-            if (ModelState.IsValid)
+            ViewBag.DanceClasses = db.Classes.ToList();
+            var danceclassId = Convert.ToInt32(Request["danceclass"]);
+
+            try
             {
-                
-                
+                participant.DanceClass = db.Classes.Single(c => c.Id == danceclassId);
+
+                participant.Paid = false; // Ensure noone hijacks this variable
+                if (ClassHasSpace(participant))
+                {
+                    participant.Status = ParticipantStatus.AwaitingPayment;
+                    TempData["Message"] = "Successfully registered participant :) We will contact you when the payment solution is operational";
+                }
+                else
+                {
+                    participant.Status = ParticipantStatus.PutInWaitingList;
+                    TempData["Message"] = "The selected class was full, you've been put in the waiting list.";
+                }
                 db.Participants.Add(participant);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                TempData["Message"] = "Something went wrong, did you fill the form correctly?";
             }
 
-            return View(participant);
+            return RedirectToAction("RegistryComplete");
+        }
+
+        private bool ClassHasSpace(Participant participant)
+        {
+            var registered = db.Participants.Count(p => p.DanceClass.Id == participant.DanceClass.Id);
+            var limit = db.Classes.Single(c => c.Id == participant.DanceClass.Id).Limit;
+            return registered < limit;
+        }
+        
+        [AllowAnonymous]
+        public ActionResult RegistryComplete()
+        {
+            return View();
         }
 
         //
         // GET: /Participant/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             Participant participant = db.Participants.Find(id);

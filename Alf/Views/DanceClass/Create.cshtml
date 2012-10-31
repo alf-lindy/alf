@@ -13,11 +13,31 @@
         <legend>DanceClass</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Limit)
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
         </div>
-        <div class="editor-field">
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Limit)
             @Html.EditorFor(model => model.Limit)
             @Html.ValidationMessageFor(model => model.Limit)
+        </div>
+
+        <div>
+            Level:<br />
+            @foreach(Alf.Models.Level level in Enum.GetValues(typeof(Alf.Models.Level))) {
+                @Html.RadioButtonFor(model => model.Level, level)
+                    <span>@level</span><br />
+            }
+        </div>
+
+        <div>
+            Track:<br />
+            @foreach(Alf.Models.Track track in Enum.GetValues(typeof(Alf.Models.Track))) {
+                @Html.RadioButtonFor(model => model.Track, track)
+                    <span>@track</span><br />
+            }
         </div>
 
         <p>

@@ -10,11 +10,23 @@
     <legend>DanceClass</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Limit)
+         @Html.DisplayNameFor(model => model.Name)
+        @Html.DisplayFor(model => model.Name)
     </div>
-    <div class="display-field">
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Limit)
         @Html.DisplayFor(model => model.Limit)
     </div>
+    <div>
+        <ul>
+            @foreach (Alf.Models.Participant participant in ViewBag.Participants) { 
+                <li>@participant.Name (@participant.Status)</li>
+        
+            }
+        </ul>
+    </div>
+
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

@@ -15,7 +15,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/
-
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Classes.ToList());
@@ -23,10 +23,11 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Details/5
-
+        [AllowAnonymous]
         public ActionResult Details(int id = 0)
         {
             DanceClass danceclass = db.Classes.Find(id);
+            ViewBag.Participants = db.Participants.Where(p => p.DanceClass.Id == id);
             if (danceclass == null)
             {
                 return HttpNotFound();
@@ -36,7 +37,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Create
-
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();

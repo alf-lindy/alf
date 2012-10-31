@@ -1,5 +1,4 @@
-﻿using Alf.App_Code;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +28,7 @@ namespace Alf
 
         private static void ConfigureIoC()
         {
-            IoC.RegisterType<IParticipantRepository, ParticipantRepository>();
+            //IoC.RegisterType<IParticipantRepository, ParticipantRepository>();
         }
 
         public static void RegisterRoutes(RouteCollection routes)
