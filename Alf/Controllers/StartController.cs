@@ -14,5 +14,17 @@ namespace Alf.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public ActionResult Teachers() 
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public ActionResult EventInfo() 
+        {
+            return View();
+        }
+        
     }
 }

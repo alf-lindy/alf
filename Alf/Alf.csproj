@@ -264,6 +264,8 @@
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Participant\RegistryComplete.cshtml" />
+    <Content Include="Views\Start\Teachers.cshtml" />
+    <Content Include="Views\Start\EventInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
