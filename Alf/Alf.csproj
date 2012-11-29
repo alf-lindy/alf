@@ -150,6 +150,7 @@
   <ItemGroup>
     <Content Include="Content\Images\banner.png" />
     <Content Include="Content\Images\pagination.png" />
+    <Content Include="Content\Images\slides\1.jpg" />
     <Content Include="Content\Images\slides\2.jpg" />
     <Content Include="Content\Images\slides\IMG_5124.jpg" />
     <Content Include="Content\Images\slides\IMG_5171.jpg" />
