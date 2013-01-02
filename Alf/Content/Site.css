@@ -20,6 +20,19 @@ img#banner {
     padding: 20px;
 }
 
+#menustrip {
+    width: 1090px;
+    margin: 0px auto 0px auto;
+    background: black;
+    padding: 5px;
+}
+
+#menustrip a {
+    color: white;
+    padding-right: 1em;
+    text-decoration: none;
+}
+
 .splashbox a {
     float:left;
     width: 345px;

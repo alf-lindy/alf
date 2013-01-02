@@ -13,7 +13,11 @@
         <a href="@Url.Action("Index", "Start")">
             <img src="~/Content/Images/banner.png" id="banner" />
         </a>
-        
+        <div id="menustrip">
+            @Html.ActionLink("Event information", "EventInfo", "Start")
+            @Html.ActionLink("Teachers", "Teachers", "Start")
+            @Html.ActionLink("Register", "Create", "Participant",null, new { @class = "green" })
+        </div>
         <div id="maincontent">
             @RenderBody()
         </div>
