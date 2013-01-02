@@ -55,6 +55,11 @@ fieldset label {
     display:inline-block;
 }
 
+p.warning {
+    background: #FFEFAE;
+    border: 1px solid #DFCF8E;
+}
+
 #slider {position: relative; overflow: hidden;height:250px;}
 #slider img {position:absolute;	margin:0; height:250px; display:none;}
 #imageloader {position:relative; display:block; width: 100%; margin: 0px auto; text-align: center;}
