@@ -75,7 +75,9 @@ namespace MvcApplication2.Controllers
         [HttpPost]
         public ActionResult Register(RegisterModel model)
         {
-            if (model.UserName.ToLower() != "administrator") {
+            var legalUserNames = new List<string> { "administrator", "alf" };
+
+            if (!legalUserNames.Contains(model.UserName.ToLower() )) {
                 ModelState.AddModelError("", "The only allowed account is administrator");
             } else if (ModelState.IsValid)
             {
