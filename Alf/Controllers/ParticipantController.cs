@@ -36,16 +36,6 @@ namespace Alf.Controllers
             return View(participant);
         }
 
-        public ActionResult UpdateGuids()
-        {
-            foreach (var item in db.Participants)
-            {
-                item.Guid = Guid.NewGuid();
-            }
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         //
         // GET: /Participant/Create
         [AllowAnonymous]
