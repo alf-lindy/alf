@@ -22,11 +22,14 @@ namespace Alf.Models
         public bool OfferAccomodation { get; set; }
         public bool SeeksAccomodation { get; set; }
         public string Phonenumber { get; set; }
-
+        public Guid Guid { get; set; }
         
         public int DanceClassId { get; set; }
+        
+        
+        public ParticipantStatus Status { get; set; }
         [ForeignKey("DanceClassId")]
         public DanceClass DanceClass { get; set; }
-        public ParticipantStatus Status { get; set; }
+        public virtual ICollection<Competition> Competitions { get; set; }
     }
 }

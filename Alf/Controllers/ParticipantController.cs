@@ -18,7 +18,9 @@ namespace Alf.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View(db.Participants.ToList());
+            var ret = db.Participants.ToList();
+            ret.ForEach(p => p.DanceClass = db.Classes.FirstOrDefault(c => c.Id == p.DanceClassId));
+            return View(ret);
         }
 
         //
@@ -32,6 +34,16 @@ namespace Alf.Controllers
                 return HttpNotFound();
             }
             return View(participant);
+        }
+
+        public ActionResult UpdateGuids()
+        {
+            foreach (var item in db.Participants)
+            {
+                item.Guid = Guid.NewGuid();
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         //
@@ -58,16 +70,21 @@ namespace Alf.Controllers
                 participant.DanceClass = db.Classes.Single(c => c.Id == danceclassId);
 
                 participant.Paid = false; // Ensure noone hijacks this variable
+                participant.Guid = Guid.NewGuid();
+
                 if (ClassHasSpace(participant))
                 {
                     participant.Status = ParticipantStatus.AwaitingPayment;
-                    TempData["Message"] = "Successfully registered participant :) We will contact you when the payment solution is operational";
+                    TempData["Message"] = "Successfully registered participant :) We will contact you when the payment solution is operational.";
                 }
                 else
                 {
                     participant.Status = ParticipantStatus.PutInWaitingList;
                     TempData["Message"] = "The selected class was full, you've been put in the waiting list.";
                 }
+
+                TempData["Message"] += "<p>Go <a href=\"/Competition/SignUp/" + participant.Guid.ToString()  + "\">here</a> to sign up for competitions</p>";
+
                 db.Participants.Add(participant);
                 db.SaveChanges();
             }

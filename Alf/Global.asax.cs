@@ -24,6 +24,7 @@ namespace Alf
             
             RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
         }
 
         private static void ConfigureIoC()

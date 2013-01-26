@@ -25,7 +25,8 @@
         <td>@Html.DisplayFor(modelItem => item.Mail)</td>
         <td>@Html.DisplayFor(modelItem => item.NTNUI)</td>
         <td>@Html.DisplayFor(modelItem => item.Paid)</td>
-        <td>@Html.DisplayFor(modelitem => item.DanceClassId)</td>
+        <td>
+            @Html.DisplayFor(modelitem => item.DanceClass.Name)</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |

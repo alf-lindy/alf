@@ -16,8 +16,18 @@
         <div id="menustrip">
             @Html.ActionLink("Event information", "EventInfo", "Start")
             @Html.ActionLink("Teachers", "Teachers", "Start")
-            @Html.ActionLink("Register", "Create", "Participant",null, new { @class = "green" })
+            @Html.ActionLink("Register", "Create", "Participant")
         </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+        <div id="adminstrip">
+            <span style="color: white">ADMINISTRASJON:</span>
+            @Html.ActionLink("Participants", "", "Participant")
+            @Html.ActionLink("Dance classes", "", "DanceClass")
+            @Html.ActionLink("Competitions", "", "Competition")
+            @Html.ActionLink("Logg ut", "LogOff", "Account")
+        </div>    
+        }
         <div id="maincontent">
             @RenderBody()
         </div>

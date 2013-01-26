@@ -33,6 +33,19 @@ img#banner {
     text-decoration: none;
 }
 
+#adminstrip {
+    width: 1090px;
+    margin: 0px auto 0px auto;
+    background: black;
+    padding: 5px;
+}
+
+#adminstrip a {
+    color: white;
+    padding-right: 1em;
+    text-decoration: none;
+}
+
 .splashbox a {
     float:left;
     width: 345px;
@@ -71,7 +84,9 @@ fieldset label {
     width: 100px;
     display:inline-block;
 }
-
+    fieldset .display-label {
+        font-weight: bold;
+    }
 p.warning {
     background: #FFEFAE;
     border: 1px solid #DFCF8E;

@@ -1,0 +1,19 @@
+﻿@model Alf.ViewModels.CompetitionSignup
+
+<h1>Welcome @Model.Username</h1>
+
+<h2>You may sign up for these competitions:</h2>
+<ul>
+    @foreach (var competition in @Model.Available)
+    {
+        <li><a href="@Model.Guid?Competition=@competition.Id">@competition.Name</a></li>
+    }
+</ul>
+
+<h2>You have signed up for these competitions:</h2>
+<ul>
+    @foreach (var competition in @Model.SignedUp)
+    {
+        <li>@competition.Name</li>
+    }
+</ul>

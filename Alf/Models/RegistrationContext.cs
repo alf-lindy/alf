@@ -11,10 +11,10 @@ namespace Alf.Models
     {
         public DbSet<Participant> Participants { get; set; }
         public DbSet<DanceClass> Classes { get; set; }
+        public DbSet<Competition> Competitions { get; set; }
 
         public RegistrationContext() : base("RegistrationContext")
         {
-
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
