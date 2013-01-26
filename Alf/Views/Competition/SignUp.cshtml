@@ -1,8 +1,23 @@
 ﻿@model Alf.ViewModels.CompetitionSignup
 
-<h1>Welcome @Model.Username</h1>
+<h2>ALC - Another Lindy Hop Championship</h2>
+<p>For the first time in ALF history, we will feature an awesome Lindy Hop and Boogie Woogie contest - open to all takers!</p>
 
-<h2>You may sign up for these competitions:</h2>
+<h4>Lindy Hop</h4>
+<ul>
+    <li>Jack'n'Jill</li>
+    <li>Strictly with partner</li>
+    <li>Show case with partner</li>
+</ul>
+
+<h4>Boogie Woogie</h4>
+<ul>
+    <li>Fast feet with random partner</li>
+    <li>Strictly with partner</li>
+    <li>Show case with partner</li>
+</ul>
+
+<h4>You may sign up for these competitions:</h4>
 <ul>
     @foreach (var competition in @Model.Available)
     {
@@ -10,7 +25,7 @@
     }
 </ul>
 
-<h2>You have signed up for these competitions:</h2>
+<h4>You have signed up for these competitions:</h4>
 <ul>
     @foreach (var competition in @Model.SignedUp)
     {

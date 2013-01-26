@@ -91,6 +91,9 @@ p.warning {
     background: #FFEFAE;
     border: 1px solid #DFCF8E;
 }
+li {
+    margin-left: 30px;
+}
 
 #slider {position: relative; overflow: hidden;height:250px;}
 #slider img {position:absolute;	margin:0; height:250px; display:none;}
