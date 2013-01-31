@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Alf.Models;
+using AppHarbor.Web.Mvc;
 
 namespace Alf.Controllers
 {
@@ -48,13 +49,17 @@ namespace Alf.Controllers
         //
         // POST: /Participant/Create
 
+        protected override ITempDataProvider CreateTempDataProvider()
+        {
+            return new CookieTempDataProvider();
+        }
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Create(Participant participant)
         {
             ViewBag.DanceClasses = db.Classes.ToList();
             var danceclassId = Convert.ToInt32(Request["danceclass"]);
-
             try
             {
                 participant.DanceClass = db.Classes.Single(c => c.Id == danceclassId);
