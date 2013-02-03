@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MailServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -105,6 +106,10 @@
     <ProjectReference Include="..\Alf\Alf.csproj">
       <Project>{E2B144D8-572A-4F8F-84AA-E83B4302BBC9}</Project>
       <Name>Alf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MailService\Services.csproj">
+      <Project>{43556eb7-19f6-4909-95d3-c4c26555c56c}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

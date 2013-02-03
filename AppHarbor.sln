@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alf", "Alf\Alf.csproj", "{E2B144D8-572A-4F8F-84AA-E83B4302BBC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alf.Tests", "Alf.Tests\Alf.Tests.csproj", "{92270436-D114-4E01-B4CE-8A3FCDD0EC5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "MailService\Services.csproj", "{43556EB7-19F6-4909-95D3-C4C26555C56C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{92270436-D114-4E01-B4CE-8A3FCDD0EC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92270436-D114-4E01-B4CE-8A3FCDD0EC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92270436-D114-4E01-B4CE-8A3FCDD0EC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
