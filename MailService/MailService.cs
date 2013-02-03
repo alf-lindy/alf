@@ -32,10 +32,12 @@ namespace Services
         public static void SendRegistrationConfirmed(string userid, string mail)
         {
             var message = string.Format(
-@"Your personal registration for the competition can be accessed here: alf.apphb.com/Competition/SignUp/{0}
+@"Thank you for registering for ALF!
+
+Your personal registration for the competition can be accessed here: alf.apphb.com/Competition/SignUp/{0}
 
 Payment information:
-To pay for your attendace at ALF 2013 we will accept payments through www.deltaker.no here https://www.deltager.no/participant/arrangement.aspx?id=66098
+To pay for your attendace at ALF 2013 we will accept payments through deltager.no here https://www.deltager.no/participant/arrangement.aspx?id=66098
 
 We are looking forward to seeing you at ALF 2013 this April.
 

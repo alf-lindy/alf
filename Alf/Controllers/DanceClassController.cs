@@ -15,6 +15,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Classes.ToList());
@@ -22,6 +23,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Details/5
+        [Authorize]
         public ActionResult Details(int id = 0)
         {
             DanceClass danceclass = db.Classes.Find(id);
@@ -35,6 +37,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -42,7 +45,7 @@ namespace Alf.Controllers
 
         //
         // POST: /DanceClass/Create
-
+        [Authorize]
         [HttpPost]
         public ActionResult Create(DanceClass danceclass)
         {
@@ -58,7 +61,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Edit/5
-
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             DanceClass danceclass = db.Classes.Find(id);
@@ -71,7 +74,7 @@ namespace Alf.Controllers
 
         //
         // POST: /DanceClass/Edit/5
-
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(DanceClass danceclass)
         {
@@ -86,7 +89,7 @@ namespace Alf.Controllers
 
         //
         // GET: /DanceClass/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             DanceClass danceclass = db.Classes.Find(id);
@@ -99,7 +102,7 @@ namespace Alf.Controllers
 
         //
         // POST: /DanceClass/Delete/5
-
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {

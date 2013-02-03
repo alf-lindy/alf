@@ -25,6 +25,14 @@ namespace Alf.Controllers
             return View(ret);
         }
 
+
+        [Authorize]
+        public ActionResult SendConfirmationMail()
+        {
+            db.Participants.ToList().ForEach(p => MailService.SendRegistrationConfirmed(p.Guid.ToString(), p.Mail));
+            return RedirectToAction("Index");
+        }
+
         //
         // GET: /Participant/Details/5
         [Authorize]
@@ -108,6 +116,7 @@ namespace Alf.Controllers
 
         //
         // GET: /Participant/Edit/5
+        [Authorize]
         public ActionResult Edit(int id = 0)
         {
             Participant participant = db.Participants.Find(id);
@@ -120,7 +129,7 @@ namespace Alf.Controllers
 
         //
         // POST: /Participant/Edit/5
-
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(Participant participant)
         {
@@ -135,7 +144,7 @@ namespace Alf.Controllers
 
         //
         // GET: /Participant/Delete/5
-
+        [Authorize]
         public ActionResult Delete(int id = 0)
         {
             Participant participant = db.Participants.Find(id);
@@ -148,7 +157,7 @@ namespace Alf.Controllers
 
         //
         // POST: /Participant/Delete/5
-
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
