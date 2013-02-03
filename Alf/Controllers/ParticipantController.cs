@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Alf.Models;
 using AppHarbor.Web.Mvc;
+using Services;
 
 namespace Alf.Controllers
 {
@@ -70,7 +71,8 @@ namespace Alf.Controllers
                 if (ClassHasSpace(participant))
                 {
                     participant.Status = ParticipantStatus.AwaitingPayment;
-                    TempData["Message"] = "Successfully registered participant :) We will contact you when the payment solution is operational.";
+                    TempData["Message"] = "Successfully registered participant :) Please check your inbox";
+                    MailService.SendRegistrationConfirmed(participant.Guid.ToString(), participant.Mail);
                 }
                 else
                 {
