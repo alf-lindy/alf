@@ -155,6 +155,19 @@ namespace Alf.Controllers
             return View(participant);
         }
 
+        [Authorize]
+        public ActionResult RegisterPaid(int id = 0)
+        {
+            Participant participant = db.Participants.Find(id);
+            if (participant == null)
+            {
+                return HttpNotFound();
+            }
+            participant.Paid = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         //
         // POST: /Participant/Delete/5
         [Authorize]
