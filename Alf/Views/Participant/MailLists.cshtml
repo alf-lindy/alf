@@ -3,15 +3,38 @@
 @{
     ViewBag.Title = "Index";
 }
-
+  <div style="border: 3px solid #bbff2d">
 <h2>De som har betalt: </h2>
 @foreach (Alf.Models.Participant medlem in ViewBag.Betalt)
 {
     @Html.Raw(@medlem.Mail + ", ")
 }
 
-<h2>De som IKKE har betalt: </h2>
-@foreach (Alf.Models.Participant medlem in ViewBag.IkkeBetalt)
+@using(Html.BeginForm("SendMailTilBetalte","Participant"))
 {
-    @Html.Raw(@medlem.Mail + ", ")
+  
+        <h4>Send mail til de som har betalt</h4>
+        <p>Tittel:</p>
+        <input name="tittel"  />
+        <p>Tekst:</p>
+        <textarea name="mailtekst" id="mailtekst" style="width: 500px; height: 250px;"></textarea>
+        <input type="submit" value="Send" />
+    
 }
+      </div>
+<div style="border: 3px solid #fc4f4f">
+    <h2>De som IKKE har betalt: </h2>
+    @foreach (Alf.Models.Participant medlem in ViewBag.IkkeBetalt)
+    {
+        @Html.Raw(@medlem.Mail + ", ")
+    }
+    @using(Html.BeginForm("SendMailTilIkkeBetalte","Participant"))
+    {
+        <h4>Send mail til de som ikke har betalt</h4>
+        <p>Tittel:</p>
+        <input name="tittel"  />
+        <p>Tekst:</p>
+        <textarea name="mailtekst" id="mailtekst" style="width: 500px; height: 250px;"></textarea>
+        <input type="submit" value="Send" />
+    }
+    </div>

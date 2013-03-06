@@ -279,6 +279,7 @@
     <Content Include="Views\Competition\Delete.cshtml" />
     <Content Include="Views\Competition\SignUp.cshtml" />
     <Content Include="Views\Participant\MailLists.cshtml" />
+    <Content Include="Views\Participant\SendMailTilIkkeBetalte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -290,6 +291,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{03957196-b366-4ba1-8e81-d999e3198951}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MailService\Services.csproj">
       <Project>{43556eb7-19f6-4909-95d3-c4c26555c56c}</Project>
       <Name>Services</Name>

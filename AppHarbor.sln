@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alf.Tests", "Alf.Tests\Alf.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "MailService\Services.csproj", "{43556EB7-19F6-4909-95D3-C4C26555C56C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{03957196-B366-4BA1-8E81-D999E3198951}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43556EB7-19F6-4909-95D3-C4C26555C56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03957196-B366-4BA1-8E81-D999E3198951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03957196-B366-4BA1-8E81-D999E3198951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03957196-B366-4BA1-8E81-D999E3198951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03957196-B366-4BA1-8E81-D999E3198951}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

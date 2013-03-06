@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Alf.Models;
 using AppHarbor.Web.Mvc;
 using Services;
+using Data;
 
 namespace Alf.Controllers
 {
@@ -55,6 +56,33 @@ namespace Alf.Controllers
             }
             return View(participant);
         }
+        
+        [HttpPost]
+        [Authorize]
+        public ActionResult SendMailTilIkkeBetalte()
+        {
+            var tekst = Request["mailtekst"] as string;
+            var tittel = Request["tittel"] as string;
+            var personer = db.Participants.Where(p => p.Paid == false).Select(p => new MailPerson { Adresse = p.Mail, Navn = p.Name, Id = p.Guid }).ToList();
+
+            ViewBag.Status = MailService.SendMail(tittel, tekst, personer);
+
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult SendMailTilBetalte()
+        {
+            var tekst = Request["mailtekst"] as string;
+            var tittel = Request["tittel"] as string;
+            var personer = db.Participants.Where(p => p.Paid == true).Select(p => new MailPerson { Adresse = p.Mail, Navn = p.Name, Id = p.Guid }).ToList();
+
+            ViewBag.Status = MailService.SendMail(tittel, tekst, personer);
+
+            return View();
+        }
+
 
         //
         // GET: /Participant/Create
