@@ -3,6 +3,23 @@
 @{
     ViewBag.Title = "Index";
 }
+
+<p>
+    Når du skriver mail, bruk [navn] der navnet til medlemmet som mottar mailen skal stå. Bruk [competitionlink] der link til konkuranser skal stå. Bruk [betalingslink] der link til betaling skal stå.
+</p>
+<br />Eksempel på mail:
+<pre style="background: #a3a3a3">
+    
+    Hei [navn]!
+
+    Det ser ut som du ennå ikke har betalt, om det er tilfelle, kunne du gått inn her og gjort det nå? [betalingslink]
+
+    Det er fortsatt mulig å melde seg på konkuranser her: [competitionlink]
+
+    Hilsen Alf-teamet!
+</pre>
+
+
   <div style="border: 3px solid #bbff2d">
 <h2>De som har betalt: </h2>
 @foreach (Alf.Models.Participant medlem in ViewBag.Betalt)
