@@ -25,6 +25,16 @@ namespace Alf.Controllers
             return View(ret);
         }
 
+        //
+        // GET: /Participant/
+        [Authorize]
+        public ActionResult MailLists()
+        {
+            ViewBag.IkkeBetalt = db.Participants.Where(p => p.Paid == false).ToList();
+            ViewBag.Betalt = db.Participants.Where(p => p.Paid == true).ToList();
+
+            return View();
+        }
 
         [Authorize]
         public ActionResult SendConfirmationMail()

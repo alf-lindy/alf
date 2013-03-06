@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Alf.Models.Participant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>De som har betalt: </h2>
+@foreach (Alf.Models.Participant medlem in ViewBag.Betalt)
+{
+    @Html.Raw(@medlem.Mail + ", ")
+}
+
+<h2>De som IKKE har betalt: </h2>
+@foreach (Alf.Models.Participant medlem in ViewBag.IkkeBetalt)
+{
+    @Html.Raw(@medlem.Mail + ", ")
+}

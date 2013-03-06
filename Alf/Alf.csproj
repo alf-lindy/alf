@@ -278,6 +278,7 @@
     <Content Include="Views\Competition\Edit.cshtml" />
     <Content Include="Views\Competition\Delete.cshtml" />
     <Content Include="Views\Competition\SignUp.cshtml" />
+    <Content Include="Views\Participant\MailLists.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
