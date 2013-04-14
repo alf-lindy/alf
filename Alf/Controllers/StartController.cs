@@ -25,6 +25,11 @@ namespace Alf.Controllers
         {
             return View();
         }
-        
+
+        [AllowAnonymous]
+        public ActionResult Competition()
+        {
+            return View();
+        }
     }
 }

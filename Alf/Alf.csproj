@@ -280,6 +280,7 @@
     <Content Include="Views\Competition\SignUp.cshtml" />
     <Content Include="Views\Participant\MailLists.cshtml" />
     <Content Include="Views\Participant\SendMailTilIkkeBetalte.cshtml" />
+    <Content Include="Views\Start\Competition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
